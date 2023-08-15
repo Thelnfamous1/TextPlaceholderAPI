@@ -5,6 +5,7 @@ import eu.pb4.placeholders.api.Placeholders;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.util.MavenVersionStringHelper;
 import net.minecraftforge.fml.ModList;
 
 import java.lang.management.ManagementFactory;
@@ -67,7 +68,7 @@ public class ServerPlaceholders {
                 var container = ModList.get().getModContainerById(arg);
 
                 if (container.isPresent()) {
-                    return PlaceholderResult.value(Component.literal(container.get().getModInfo().getVersion().getQualifier()));
+                    return PlaceholderResult.value(Component.literal(MavenVersionStringHelper.artifactVersionToString(container.get().getModInfo().getVersion())));
                 }
             }
             return PlaceholderResult.invalid("Invalid argument");

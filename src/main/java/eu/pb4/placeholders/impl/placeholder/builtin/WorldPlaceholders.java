@@ -23,7 +23,7 @@ public class WorldPlaceholders {
                 world = ctx.server().overworld();
             }
 
-            long dayTime = (long) (world.getTimeOfDay(0.0F) * 3.6 / 60);
+            long dayTime = (long) (world.getDayTime() * 3.6 / 60);
 
             return PlaceholderResult.value(String.format("%02d:%02d", (dayTime / 60 + 6) % 24, dayTime % 60));
         });
@@ -36,7 +36,7 @@ public class WorldPlaceholders {
                 world = ctx.server().overworld();
             }
 
-            long dayTime = (long) (world.getTimeOfDay(0.0F) * 3.6 / 60);
+            long dayTime = (long) (world.getDayTime() * 3.6 / 60);
             long x = (dayTime / 60 + 6) % 24;
             long y = x % 12;
             if (y == 0) {
@@ -53,7 +53,7 @@ public class WorldPlaceholders {
                 world = ctx.server().overworld();
             }
 
-            return PlaceholderResult.value("" + world.getTimeOfDay(0.0F) / 24000);
+            return PlaceholderResult.value("" + world.getDayTime() / 24000);
         });
 
         Placeholders.register(new ResourceLocation("world", "id"), (ctx, arg) -> {
