@@ -1,4 +1,4 @@
-package me.infamous.placeholder_api;
+package me.infamous.placeholders;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.fml.common.Mod;

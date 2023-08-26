@@ -1,7 +1,6 @@
 package eu.pb4.placeholders.api.parsers;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.serialization.Codec;
 import eu.pb4.placeholders.api.node.EmptyNode;
 import eu.pb4.placeholders.api.node.LiteralNode;
 import eu.pb4.placeholders.api.node.TextNode;
